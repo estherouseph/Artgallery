@@ -1,0 +1,418 @@
+/* =========================
+   GLOBAL STYLING
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f5f0;
+    color: #333;
+    animation: pageAppear 1s ease-in-out;
+}
+
+
+/* Page opening animation */
+@keyframes pageAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   NAVBAR ANIMATION
+========================= */
+
+.navbar {
+    animation: navSlide 1s ease;
+}
+
+
+@keyframes navSlide {
+
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+
+.nav-link {
+    position: relative;
+    transition: 0.3s;
+}
+
+
+.nav-link:hover {
+
+    color: #b8860b !important;
+    transform: translateY(-5px);
+
+}
+
+
+/* Underline animation */
+
+.nav-link::after {
+
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #b8860b;
+    left: 0;
+    bottom: 0;
+    transition: 0.4s;
+
+}
+
+
+.nav-link:hover::after {
+
+    width: 100%;
+
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1,h2,h3 {
+
+    animation: headingAnimation 1.2s ease;
+
+}
+
+
+@keyframes headingAnimation {
+
+    from {
+
+        opacity: 0;
+        transform: translateX(-50px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+
+}
+
+
+/* =========================
+   GALLERY CARDS
+========================= */
+
+
+.card {
+
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+    animation: cardAppear 1s ease;
+
+}
+
+
+
+@keyframes cardAppear {
+
+    from {
+
+        opacity: 0;
+        transform: scale(0.8);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+        transform: scale(1);
+
+    }
+
+}
+
+
+
+.card:hover {
+
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+
+}
+
+
+
+.card img {
+
+    height: 250px;
+    object-fit: cover;
+    transition: 0.6s;
+
+}
+
+
+
+.card:hover img {
+
+    transform: scale(1.15);
+
+}
+
+
+
+
+/* =========================
+   BUTTON ANIMATION
+========================= */
+
+
+.btn {
+
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+
+
+.btn:hover {
+
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+
+}
+
+
+
+/* =========================
+   LOGIN & SIGNUP FORM
+========================= */
+
+
+form {
+
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    animation: formAnimation 1s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+}
+
+
+
+@keyframes formAnimation {
+
+    from {
+
+        opacity:0;
+        transform: translateY(50px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+input {
+
+    transition: 0.3s;
+
+}
+
+
+
+input:focus {
+
+    transform: scale(1.03);
+    box-shadow: 0 0 10px #b8860b;
+
+}
+
+
+
+/* =========================
+   ART DETAIL PAGE
+========================= */
+
+
+.art-image {
+
+    width:100%;
+    border-radius:25px;
+    transition:0.6s;
+    animation: imageEntry 1s ease;
+
+}
+
+
+
+@keyframes imageEntry {
+
+    from {
+
+        opacity:0;
+        transform:rotateY(90deg);
+
+    }
+
+
+    to {
+
+        opacity:1;
+        transform:rotateY(0);
+
+    }
+
+}
+
+
+
+.art-image:hover {
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+/* =========================
+   DESCRIPTION BOX
+========================= */
+
+
+.description {
+
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    animation: fadeBox 1.2s ease;
+
+}
+
+
+
+@keyframes fadeBox {
+
+    from {
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to {
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* =========================
+   FLOATING EFFECT
+========================= */
+
+
+.float {
+
+    animation: floating 3s infinite ease-in-out;
+
+}
+
+
+
+@keyframes floating {
+
+    0% {
+
+        transform:translateY(0);
+
+    }
+
+
+    50% {
+
+        transform:translateY(-15px);
+
+    }
+
+
+    100% {
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+
+footer {
+
+    animation: footerAnimation 1.5s ease;
+
+}
+
+
+
+@keyframes footerAnimation {
+
+    from {
+
+        opacity:0;
+
+    }
+
+    to {
+
+        opacity:1;
+
+    }
+
+}
